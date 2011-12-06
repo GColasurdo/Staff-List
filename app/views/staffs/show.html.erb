@@ -1,25 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<nav class="span4">
+		<h3>Options:</h3>
+		<ul>
+			<li><%= link_to 'Edit', edit_staff_path(@staff) %></li>
+			<li><%= link_to 'Staff List', staffs_path %></li>
+	</nav>
 
-<p>
-  <b>Name:</b>
-  <%= @staff.name %>
-</p>
+	<article class="span12">
+	<p id="notice" class="alert-message block-message success"><%= notice %></p>
 
-<p>
-  <b>Dept:</b>
-  <%= @staff.dept %>
-</p>
+	<p>
+	  <b>Name:</b>
+	  <%= @staff.name %>
+	</p>
 
-<p>
-  <b>Phone:</b>
-  <%= @staff.phone %>
-</p>
+	<p>
+	  <b>Dept:</b>
+	  <%= @staff.dept %>
+	</p>
 
-<p>
-  <b>Email:</b>
-  <%= @staff.email %>
-</p>
+	<p>
+	  <b>Phone:</b>
+	  <%= @staff.phone %>
+	</p>
 
+	<p>
+	  <b>Email:</b>
+	  <%= @staff.email %>
+	</p>
+	</article>
+</div>
 
-<%= link_to 'Edit', edit_staff_path(@staff) %> |
-<%= link_to 'Back', staffs_path %>

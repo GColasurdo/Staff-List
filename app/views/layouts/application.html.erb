@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>StaffList</title>
-  <%= stylesheet_link_tag    "bootstrap" %>
+	<meta charset="utf-8" />
+  <title>Staff List</title>
+  <%= stylesheet_link_tag    "bootstrap", "layout" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body class="container">
+	<header>
+		<h1>Simple Staff List <span class="subhead">with nice ui</span></h1>
+	</header>
 
+	<section>
+		<%= yield %>
+	</section>
+
+	<footer class="pagefoot">
+		<p>Garth Colasurdo</p>
+	</footer>
 </body>
 </html>

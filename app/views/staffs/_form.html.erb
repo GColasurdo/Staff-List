@@ -1,7 +1,7 @@
 <%= form_for(@staff) do |f| %>
   <% if @staff.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@staff.errors.count, "error") %> prohibited this staff from being saved:</h2>
+    <div id="error_explanation" class="alert-message block-message error">
+      <h2><%= pluralize(@staff.errors.count, "error") %> prohibited this record from being saved:</h2>
 
       <ul>
       <% @staff.errors.full_messages.each do |msg| %>
@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="clearfix">
+    <%= f.label :name %>
+		<div class="input">
     <%= f.text_field :name %>
+		<span class="help-inline">Name is required</span>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :dept %><br />
+  <div class="clearfix">
+    <%= f.label :dept %>
+		<div class="input">
     <%= f.text_field :dept %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br />
+  <div class="clearfix">
+    <%= f.label :phone %>
+		<div class="input">
     <%= f.text_field :phone %>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="clearfix">
+    <%= f.label :email %>
+		<div class="input">
     <%= f.text_field :email %>
+		</div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+		<%= f.submit :class => "btn primary" %>
+		<%= link_to 'Back', staffs_path, :class => "btn" %>
   </div>
 <% end %>
